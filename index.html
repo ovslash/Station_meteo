@@ -5,10 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Station météo</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
     <h1>Station météo</h1>
+
+    <div class="container">
+      <!-- image du temps -->
+      <div>
+        <img id="image-temps" alt="Image Météo" />
+      </div>
+
+      <!-- température -->
+      <div>
+        <p id="temperature">14.67°C</p>
+      </div>
+
+      <!-- description du temps -->
+      <div>
+        <p id="description">nuageux</p>
+      </div>
+
+      <!-- lieu -->
+      <div class="ville">
+        <i class="fa-solid fa-location-dot"></i>
+        <p id="lieu">Niort</p>
+      </div>
+
+      <div class="info">
+        <div class="info__details info__details__1">
+          <!-- température ressentie -->
+          <i class="fa-solid fa-temperature-three-quarters"></i>
+          <div>
+            <p id="temperature-ressentie">14.67°C</p>
+            <p>Ressenti</p>
+          </div>
+        </div>
+
+        <!-- %humidité -->
+        <div class="info__details">
+          <i class="fa-solid fa-droplet"></i>
+          <div>
+            <p id="humidite">95%</p>
+            <p>Humidité</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- heure -->
+      <div>
+        <p>Actualisé à <span id="heure"></span></p>
+      </div>
+    </div>
+
     <script src="meteo.js"></script>
   </body>
 </html>
