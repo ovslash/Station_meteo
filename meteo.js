@@ -6,7 +6,7 @@ function coordoneesVille(ville) {
   } else {
     // Récuperation de la position d'une ville
     return fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${ville},fr&limit=1&appid=7f0cf71b80917549291aa9e7d834fc02`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${ville},fr&limit=1&appid=7f0cf71b80917549291aa9e7d834fc02`
     )
       .then((response) => response.json())
       .then((data) => {
