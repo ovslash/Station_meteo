@@ -33,12 +33,12 @@ function donneesMeteo() {
     .then((response) => response.json())
     .then((data) => {
       // Affichage des données
-      document.getElementById(
-        "temperature"
-      ).textContent = `${data.main.temp}°C`;
+      document.getElementById("temperature").textContent = `${Math.round(
+        data.main.temp
+      )}°C`;
       document.getElementById(
         "temperature-ressentie"
-      ).textContent = `${data.main.feels_like}°C`;
+      ).textContent = `${Math.round(data.main.feels_like)}°C`;
       document.getElementById(
         "description"
       ).textContent = `${data.weather[0].description}`;
