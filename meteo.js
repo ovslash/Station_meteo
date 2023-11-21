@@ -13,6 +13,12 @@ function coordoneesVille(ville) {
         const { lat, lon } = data[0];
         villeCoordonees = { lat, lon };
         return villeCoordonees;
+      })
+      .catch((error) => {
+        console.error(
+          `Erreur lors de la récupération des coordonnées : ${error.message}`
+        );
+        throw error;
       });
   }
 }
@@ -57,7 +63,11 @@ function donneesMeteo() {
       var heureExecutionString = heureExecution.toLocaleTimeString();
       document.getElementById("heure").textContent = heureExecutionString;
     })
-    .catch((error) => console.error(error));
+    .catch((error) =>
+      console.error(
+        `Erreur lors de la récupération des données météo : ${error.message}`
+      )
+    );
 }
 
 donneesMeteo();
